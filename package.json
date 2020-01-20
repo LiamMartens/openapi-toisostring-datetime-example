@@ -1,0 +1,12 @@
+{
+  "name": "openapi-toisostring-datetime-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^1.0.8-4.2.2"
+  },
+  "scripts": {
+    "generate": "yarn openapi-generator generate --type-mappings Date=string --enable-post-process-file -i swagger.json -g typescript-axios -o ./api"
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "Example Swagger"
+    },
+    "host": "api.example.com",
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/example": {
+            "get": {
+                "operationId": "Example",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "parameters": [
+                    {
+                        "name": "param",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "response": {
+            "type": "object"
+        }
+    }
+}
